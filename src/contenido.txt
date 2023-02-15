@@ -1,0 +1,31 @@
+Portafolio: 
+01. pagina GPShop
+02. inicio de sesion con google o fb
+03. pagina peruvian shop
+04. Imagen docker
+05. Mi web portafolio
+06. Blog de rick y morty
+
+
+01. pagina GPShop
+href: https://gpshop.pe/
+alt="distribuidora GPshop articulos de limpieza"
+
+
+02. inicio de sesion con google o fb
+
+
+03. pagina peruvian shop
+href: https://omarrojasochoa.github.io/proyect-ecommerce/ecommerce.html
+alt="ecommerce Peruvian Shop cuidado personal"
+
+04. Imagen docker 
+href: https://hub.docker.com/repository/docker/omar3011/angular-docker-app/general
+href: https://github.com/omarrojasochoa/angular-docker-app
+
+05. Mi web portafolio
+href 
+
+06. Blog de rick y morty
+href: https://omarrojasochoa.github.io/react-rick-and-morty/
+
