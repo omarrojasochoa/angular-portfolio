@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Container, Engine } from 'tsparticles-engine';
 import { loadFull } from 'tsparticles';
 import * as Aos from 'aos';
+import { ClassService } from './services/mostrarAbout.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ export class AppComponent implements OnInit {
   particlesOptions = {
     background: {
       color: {
-        value: '#151b25',
+        /* value: '#151b25', */
+        value: '#151b29',
       },
     },
     fpsLimit: 120,
@@ -143,10 +145,10 @@ export class AppComponent implements OnInit {
     detectRetina: true,
   };
   particlesLoaded(container: Container): void {
-    console.log(container);
+    //console.log(container);
   }
   async particlesInit(engine: Engine): Promise<void> {
-    console.log(engine);
+    // console.log(engine);
 
     // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -155,9 +157,16 @@ export class AppComponent implements OnInit {
   }
 
   onGame = true;
+  class: string = 'close-modal';
+  constructor(private classService: ClassService) {
+    this.classService.classChange$.subscribe((className) => {
+      this.class = className === 'modal--open' ? 'open-modal' : 'close-modal';
+    });
+  }
 
   ngOnInit(): void {
     Aos.init();
+
     localStorage.setItem('mostrarComponente', 'false');
     document.querySelector('.header').classList.add('hidden');
   }

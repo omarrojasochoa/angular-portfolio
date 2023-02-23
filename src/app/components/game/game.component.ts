@@ -8,11 +8,7 @@ import { ComponenteComunicacionService } from 'src/app/services/mostrarComponent
 })
 export class GameComponent {
   onGame = true;
-  /*  game = document.querySelector('.game');
-  ngOnInit(): void {
-    const game = document.querySelector('.game');
-    game.classList.add('hidden-x');
-  } */
+
   @Output() onQuitarHidden = new EventEmitter<any>();
   constructor(
     private componenteComunicacionService: ComponenteComunicacionService
@@ -22,9 +18,13 @@ export class GameComponent {
     this.componenteComunicacionService.toggleComponente();
     localStorage.setItem('mostrarComponente', 'true');
     this.onQuitarHidden.emit();
-    console.log(this.onGame);
+    //console.log(this.onGame);
     this.onGame = !JSON.parse(localStorage.getItem('mostrarComponente'));
-    /* let game = document.querySelector('.game');
-    game.classList.add('hidden-x'); */
+    //console.log(this.onGame);
+
+    /* GameComponent to HeaderComponent */
+    setInterval(() => {
+      this.componenteComunicacionService.toggleActiveClass();
+    }, 3000);
   }
 }

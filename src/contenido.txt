@@ -10,22 +10,86 @@ Portafolio:
 01. pagina GPShop
 href: https://gpshop.pe/
 alt="distribuidora GPshop articulos de limpieza"
-
+tecnologias:
 
 02. inicio de sesion con google o fb
-
+tecnologias:
 
 03. pagina peruvian shop
 href: https://omarrojasochoa.github.io/proyect-ecommerce/ecommerce.html
+href: https://github.com/omarrojasochoa/proyect-ecommerce
 alt="ecommerce Peruvian Shop cuidado personal"
+tecnologias:
 
 04. Imagen docker 
 href: https://hub.docker.com/repository/docker/omar3011/angular-docker-app/general
 href: https://github.com/omarrojasochoa/angular-docker-app
+tecnologias: Ubuntu, Linux, Docker, Angular, TypeScript
 
 05. Mi web portafolio
 href 
+tecnologias:Angular, TypeScript, Animations, Figma
 
 06. Blog de rick y morty
 href: https://omarrojasochoa.github.io/react-rick-and-morty/
+href: https://github.com/omarrojasochoa/react-rick-and-morty
+tecnologias:
+
+--------------
+21/02
+(1) nav- al hacer clic en icono (CHECK)
+(2) comunicacion de componentes: Activar funcion de Header desde gameComponent (CHECK)
+(3) nav- agregar al computer el svg de angular (CHECK)
+(4) modificar boton wsp (CHECK)
+(5) definicion de proyectos (CHECK)
+(6) hacer logo  (CHECK)
+
+--- 
+22/02
+(0) Agregar el close-modal para que aparezca el about(CHECK)
+(1) activar about desde boton nav (CHECK)
+(2) activar about desde boton header (CHECK)
+(3) responsive (CHECK)
+(4) modificar contenido de about (CHECK)
+x
+x
+x
+x
+
+(CHECK)
+uso de tecnologias en proyectos (CHECK)
+modificar proyecto por proyecto (CHECK)
+crear la clase angular o usar la misma que react router (CHECK)
+arreglar btn ver mas (CHECK)
+
+svg: java(CHECK), spring(CHECK), ,docker(CHECK), jenkins, illustrator(CHECK)
+
+-----------------
+Arreglar btn download para (CHECK)
+descarte Dario(CHECK)
+falta parte de experiencia en btn about (CHECK)
+Actualizar CV (CHECK)
+transformar logosvg a ico (CHECK)
+
+----------
+23/02
+(1) Modificar Head de los encabezados de SEO (CHECK)
+(2) Modificar el Loader (CHECK)
+
+(3) wsp hover footer, cambiar la descripcion rick y morty, hover de img de projects (CHECK)
+(4) Subir proyecto, y desplegarlo en gh-pages
+
+Game:
+una ves presionado, ya no vuelve a salir 
+-> modificacion en el local store
+
+Loader:
+que empiece cuando se active el boton game (lo mismo que se hizo con el computer)(CHECK)
+que coja el valor que se encuentra en local store para iniciar(CHECK)
+hacer lo mismo que se le hace al game para que desaparezca(elimine) el loader despues de 3 seg(CHECK)
+
+
+
+
+
 

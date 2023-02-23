@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClassService } from 'src/app/services/mostrarAbout.service';
 import { ComponenteComunicacionService } from 'src/app/services/mostrarComponent.service';
 
 @Component({
@@ -8,10 +9,17 @@ import { ComponenteComunicacionService } from 'src/app/services/mostrarComponent
 })
 export class NavComponent implements OnInit {
   mostrar = false;
-
+  class: string = 'close-modal';
+  activeLink: string | null = null;
   constructor(
-    private componenteComunicacionService: ComponenteComunicacionService
-  ) {}
+    private componenteComunicacionService: ComponenteComunicacionService,
+    private classService: ClassService
+  ) {
+    this.activeLink = 'link1';
+    this.classService.classChange$.subscribe((className) => {
+      this.class = className === 'modal--open' ? 'open-modal' : 'close-modal';
+    });
+  }
 
   ngOnInit() {
     this.componenteComunicacionService.mostrarComponente.subscribe(
@@ -25,11 +33,18 @@ export class NavComponent implements OnInit {
       this.mostrar = JSON.parse(mostrarComponenteLS);
     }
   }
-  /* showComponent = false;
-
-  constructor(private siblingService: ComponenteComunicacionService) {}
-
-  ngOnInit() {
-    this.showComponent = this.siblingService.getShowSibling();
-  } */
+  setActiveLink(link: string): void {
+    if (this.activeLink === link) {
+      this.activeLink = null;
+    } else {
+      this.activeLink = link;
+    }
+  }
+  activarModal() {
+    this.classService.changeClass('modal--open');
+    setTimeout(() => {
+      this.activeLink = 'link2';
+      this.activeLink = 'link1';
+    }, 2000);
+  }
 }

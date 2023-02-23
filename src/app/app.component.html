@@ -6,10 +6,16 @@
 ></ng-particles>
 
 <div id="__next">
-  <app-loader class="loader"></app-loader>
+  <app-loader
+    (onQuitarHidden)="quitarHidden($event)"
+    class="loader"
+    *ngIf="onGame"
+  ></app-loader>
   <app-nav class="nav"></app-nav>
-  <app-game (onQuitarHidden)="quitarHidden($event)" *ngIf="onGame"></app-game>
+  <!-- (onQuitarHidden)="quitarHidden($event)"  -->
+  <!-- <app-game *ngIf="onGame"></app-game> -->
 
   <app-header class="header"></app-header>
-  <app-main class="main"></app-main>
+  <app-main class="main" [ngClass]="class"></app-main>
+  <app-section-about class="modal"></app-section-about>
 </div>

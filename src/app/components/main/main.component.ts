@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
+import { ClassService } from 'src/app/services/mostrarAbout.service';
 import { ComponenteComunicacionService } from 'src/app/services/mostrarComponent.service';
 
 @Component({
@@ -9,10 +10,16 @@ import { ComponenteComunicacionService } from 'src/app/services/mostrarComponent
 })
 export class MainComponent implements OnInit {
   mostrar = false;
+  class: string = 'close-modal';
 
   constructor(
-    private componenteComunicacionService: ComponenteComunicacionService
-  ) {}
+    private componenteComunicacionService: ComponenteComunicacionService,
+    private classService: ClassService
+  ) {
+    this.classService.classChange$.subscribe((className) => {
+      this.class = className === 'modal--open' ? 'open-modal' : 'close-modal';
+    });
+  }
 
   ngOnInit() {
     this.componenteComunicacionService.mostrarComponente.subscribe(
